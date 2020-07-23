@@ -21,7 +21,7 @@ app.get('/camaras/:id', function (req, res) {
     res.send(camaras[id-1]);
 });
 //retorna todas las camaras.
-app.get('/', function (req, res) {
+app.get('/camaras', function (req, res) {
     res.send(camaras);
   });
 // agrega una camara | en postman, escribir la siguiente sentencia: marca, referencia, precio e id
