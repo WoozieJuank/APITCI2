@@ -12,7 +12,7 @@ const bodyParser= require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-// Middleware de camaras
+// Middleware
 app.use( require('./routes/camaras'));
 
 // Iniciar.
