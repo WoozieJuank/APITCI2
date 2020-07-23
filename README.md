@@ -1,7 +1,5 @@
-# api_example
-Ejemplo de api en nodeJs 
-# Entorno de desarrollo
-- Nodejs
-# Como correr
-- Desde tu IDE o cmd ejecutar "npm install express --save"
-- Para iniciar ejecutar : "node server/server"
+# APITCI2
+API para TCI UCEN; Muestra marca de cámaras, creado en NODEJS
+# Como ejecutar la API
+- Desde el simbolo de sistema o terminal, escribir "npm install express --save"
+- Para iniciar: "node api/api"
