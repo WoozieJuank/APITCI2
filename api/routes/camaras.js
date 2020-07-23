@@ -15,7 +15,7 @@ var camaras = [{marca:"Nikon",referencia:"D3400",precio: "649.95",id:"1"},
                 {marca:"Canon",referencia:"EOS 1D X",precio: "457.95",id:"10"},];
 
 
-// retorna una camara especifica.
+// retorna una camara especifica por ID.
 app.get('/camaras/:id', function (req, res) {
     var id = req.params.id;
     res.send(camaras[id-1]);
