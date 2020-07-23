@@ -15,16 +15,16 @@ var camaras = [{marca:"Nikon",referencia:"D3400",precio: "649.95",id:"1"},
                 {marca:"Canon",referencia:"EOS 1D X",precio: "457.95",id:"10"},];
 
 
-// retorna usuario especifico.
+// retorna una camara especifica.
 app.get('/camaras/:id', function (req, res) {
     var id = req.params.id;
     res.send(camaras[id-1]);
 });
-//retorna todos los camaras.
+//retorna todas las camaras.
 app.get('/', function (req, res) {
     res.send(camaras);
   });
-// agrega un usuario | escribir parametros en postman en el siguiente orden: marca, referencia, precio e id
+// agrega una camara | en postman, escribir la siguiente sentencia: marca, referencia, precio e id
 app.put('/camaras',function (req,res ){
     
     let body = req.body; 
