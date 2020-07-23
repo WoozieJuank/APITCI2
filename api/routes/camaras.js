@@ -15,19 +15,21 @@ var camaras = [{marca:"Nikon",referencia:"D3400",precio: "649.95",id:"1"},
                 {marca:"Canon",referencia:"EOS 1D X",precio: "457.95",id:"10"},];
 
 
+//INDEX.
+app.get('/', function (req, res) {
+    res.send('<h1>Bienvenido a la API para TCI</h1><br><br> <p>Para listar todas las camaras "/camaras"</p><p>Para listar una cámara especifica por id: "/camaras/id" (del 1 al 10) </p>');
+  });
+
+//retorna todas las camaras.
+app.get('/camaras', function (req, res) {
+    res.send(camaras);
+  });
+
 // retorna una camara especifica por ID.
 app.get('/camaras/:id', function (req, res) {
     var id = req.params.id;
     res.send(camaras[id-1]);
 });
-//retorna todas las camaras.
-app.get('/camaras', function (req, res) {
-    res.send(camaras);
-  });
-//retorna todas las camaras.
-app.get('/', function (req, res) {
-    res.send('<h1>Bienvenido a la API para TCI</h1><br><br> <p>Para listar todas las camaras "/camaras"</p><p>Para listar una cámara especifica por id: "/camaras/id" (del 1 al 10) </p>');
-  });
 
 // agrega una camara | en postman, escribir la siguiente sentencia: marca, referencia, precio e id
 app.put('/camaras',function (req,res ){
